@@ -19,6 +19,9 @@ This project simulates a bottom-up proteomics workflow, covering the main steps 
 
 ## Installation steps
 Clone the repository and install the requirements
+pip install -r requirements.txt
+pip install .
 
 ## HOW TO
 Provide a FASTA file and use it as input to run the provided functions and simulate the complete bottom-up LC-MS workflow, from protein digestion to peptide analysis and MS1/MS2 spectrum visualization. 
+The tutorials folder gives a short example.
