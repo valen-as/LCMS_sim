@@ -82,13 +82,11 @@ def compute_sequence_coverage(protein_seq, peptides):
         The percentage of the protein sequence covered by the peptides.
     """
     
-    covered_positions = set()  #set instead of list to avoid duplicates
+    covered_positions = set()  
     for peptide in peptides:
-        start_index = protein_seq.find(peptide) #to find the start index of the peptide
-        if start_index != -1: #.find returns -1 if the peptide is not found in the protein sequence, thats why we only add if it is not -1
-           covered_positions.update(range(start_index, start_index + len(peptide))) #takes the start index and adds the length of the peptide to get end index, then all other peptide positions are added to the set
-
-    coverage = len(covered_positions) / len(protein_seq) * 100
+        start_index = protein_seq.find(peptide) 
+        if start_index != -1: 
+           covered_positions.update(range(start_index, start_index + len(peptide))) 
     return coverage
 
 
