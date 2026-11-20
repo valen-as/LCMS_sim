@@ -87,6 +87,7 @@ def compute_sequence_coverage(protein_seq, peptides):
         start_index = protein_seq.find(peptide) 
         if start_index != -1: 
            covered_positions.update(range(start_index, start_index + len(peptide))) 
+    coverage = len(covered_positions) / len(protein_seq) * 100
     return coverage
 
 
